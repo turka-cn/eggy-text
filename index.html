@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/app.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>蛋仔派对彩字工具</title>
+    <style>
+        .eggy-load {
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff url("./src/assets/app.svg");
+            background-repeat: no-repeat;
+            background-size: 150px;
+            background-position: center;
+            z-index: 114514;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="eggy-load"></div>
+    <div id="eggy">
+        <div class="eggy-title flex justify-center items-center font-bold">
+            <div class="eggy-icon bg-no-repeat bg-center bg-contain rounded-full"></div>
+            <span>蛋仔派对彩字工具</span>
+        </div>
+        <textarea class="eggy-editor"></textarea>
+        <div class="eggy-bottom p-2.5">
+            <button class="eggy-btn mt-1.5 p-2.5 w-full font-bold text-white bg-blue-400 rounded-xl">复制彩字</button>
+            <div class="eggy-bottom-text mt-1.5 text-center">仅供学习交流使用</div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        window.onload = function() {
+            document.querySelector(".eggy-load").remove()
+        }
+    </script>
+</body>
+
+</html>
